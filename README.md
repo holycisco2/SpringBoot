@@ -1,33 +1,44 @@
 # Java Spring Boot 購物車系統架構設計
 
-本專案展示如何構建具備企業級穩定性的 Java 後端系統，重點在於安全性、異常處理機制與容器化部署。
+## 專案簡介
 
-## 系統架構
-本系統採用 Spring Boot 標準分層設計，確保程式碼具備良好的維護性與擴充性：
+Spring Boot 購物車後端 + React 前端，REST API，MySQL。
 
-* **前端 (Frontend)**：負責網頁呈現與使用者互動。
-* **API 接口 (Controller)**：處理 HTTP 請求，執行 JWT 身分驗證。
-* **商業邏輯 (Service)**：處理購物車、商品管理等核心功能，並包含統一例外處理 (Global Exception Handler)。
-* **資料存取 (Repository)**：透過 Spring Data JPA 與 MySQL 資料庫進行資料存取。
+## 專案結構
 
-## 設計理念
-本專案不僅強調技術堆疊的應用，更關注系統的高可用性 (High Availability) 與使用者體驗 (User Experience)：
+```
+SpringBoot/
+├── Springboot-cart-backend/
+├── Springboot-cart-frontend/
+├── Dockerfile
+└── README.md
+```
 
-* **穩定的通訊機制**：透過統一的錯誤處理機制，確保無論系統發生何種異常，前端皆能收到明確的狀態回覆，避免用戶面臨無反應的頁面。
-* **安全性優先**：在設計之初導入 JWT 機制，保障用戶帳號與購物資料的隱私與存取安全。
-* **維護與擴充性**：採用 Spring Boot 模組化架構，使後續功能擴充與系統維護更具活性與效率。
+## 技術棧
 
-## 系統功能
+Java、Spring Boot、Spring Data JPA、MySQL、React、JWT
 
-### 會員管理
-- 使用者註冊
-- 使用者登入
-- JWT 身分驗證
+## 主要功能
 
-### 商品管理
-- 商品查詢
-- 商品詳細資訊
-- 商品分類
+- 登入 / JWT
+- 商品
+- 購物車
+- 訂單
+- 統一錯誤回應
 
-### 購物車管理
-- 加入購物車
+## 系統架構（簡化）
+
+```mermaid
+flowchart TB
+  subgraph 前端
+    A[瀏覽器 / React]
+  end
+  subgraph Spring Boot 後端
+    B[Controller<br/>API 接口]
+    C[Service<br/>商業邏輯]
+    D[Repository<br/>JPA 存取]
+    B --> C --> D
+  end
+  E[(MySQL 資料庫)]
+  A -->|HTTP + JSON| B
+  D --> E
