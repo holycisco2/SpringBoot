@@ -20,8 +20,11 @@
 ## ⚙️ 快速上手 (Getting Started)
 在本地環境快速執行本專案：
 
-# 1. 複製專案 
-[點此複製專案網址](https://github.com/holycisco2/SpringBoot.git) 或直接執行下方指令：
+# 1. 複製專案
+git clone https://github.com/holycisco2/SpringBoot.git
 
-```bash
-git clone [https://github.com/holycisco2/SpringBoot.git](https://github.com/holycisco2/SpringBoot.git)
+# 2. 建置容器
+docker build -t springboot-cart .
+
+# 3. 啟動服務
+docker run -p 8080:8080 springboot-cart
