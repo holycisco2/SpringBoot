@@ -1,61 +1,23 @@
-# Java Spring Boot 購物車系統架構設計
+# Java Spring Boot 購物車系統架構設計(Spring Boot)
+這是一個基於 Spring Boot 的後端開發專案，專注於現代化架構與 RESTful API 的實作。
 
-## 專案簡介
+技術棧 (Tech Stack)
+Framework: Spring Boot
 
-Spring Boot 購物車後端 + React 前端，REST API，JWT 驗證，MySQL。
+Language: Java
 
-## 專案結構
+Database: [填入你使用的資料庫，例如 MySQL 或 PostgreSQL]
 
-```
-SpringBoot/
-├── Springboot-cart-backend/
-│   └── src/main/java/.../cart/
-│       ├── controller/   # Auth, Product, Favorite, Order
-│       ├── service/
-│       ├── repository/
-│       ├── exception/
-│       └── response/     # ApiResponse
-├── Springboot-cart-frontend/
-├── Dockerfile
-└── README.md
-```
+Build Tool: Maven/Gradle
 
-## 技術棧
+核心功能 (Key Features)
+RESTful API 設計: 實現標準的 HTTP 方法 (GET, POST, PUT, DELETE) 進行數據互動。
 
-Java、Spring Boot、Spring Data JPA、MySQL、React、JWT
+資料持久層: 使用 [例如: Spring Data JPA / Hibernate] 進行資料庫操作。
 
-## 主要功能
+架構架構: [例如: MVC 架構 / 分層架構]，確保程式碼易於維護與擴展。
 
-- 登入 / JWT（AuthController）
-- 商品（ProductController）
-- 收藏（FavoriteController）
-- 訂單（OrderController）
-- 統一錯誤回應（GlobalExceptionHandler + ApiResponse）
+聯繫方式
+GitHub: https://github.com/holycisco2/SpringBoot
 
-## 系統架構
-
-```mermaid
-flowchart TB
-  subgraph 前端
-    A[瀏覽器 / React]
-  end
-
-  subgraph Spring Boot 後端
-    F[JWT 驗證]
-    subgraph Controller
-      B1[AuthController]
-      B2[ProductController]
-      B3[FavoriteController]
-      B4[OrderController]
-    end
-    S[Service 層]
-    R[Repository / JPA]
-    F --> B1 & B2 & B3 & B4
-    B1 & B2 & B3 & B4 --> S --> R
-  end
-
-  E[(MySQL)]
-
-  A -->|HTTP + JSON| F
-  R --> E
-```
+Email: holycisco@yahoo.com.tw
