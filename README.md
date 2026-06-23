@@ -6,7 +6,7 @@ Framework: Spring Boot
 
 Language: Java
 
-Database: [填入你使用的資料庫，例如 MySQL 或 PostgreSQL]
+Database: MySQL
 
 Build Tool: Maven/Gradle
 
