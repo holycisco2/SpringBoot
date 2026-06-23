@@ -13,9 +13,9 @@ Build Tool: Maven/Gradle
 核心功能 (Key Features)
 RESTful API 設計: 實現標準的 HTTP 方法 (GET, POST, PUT, DELETE) 進行數據互動。
 
-資料持久層: 使用 [例如: Spring Data JPA / Hibernate] 進行資料庫操作。
+資料持久層: 使用 Spring Data JPA / Hibernate進行資料庫操作。
 
-架構架構: [例如: MVC 架構 / 分層架構]，確保程式碼易於維護與擴展。
+架構架構: 使用SpringBoot MVC 分層架構，確保程式碼易於維護與擴展。
 
 聯繫方式
 GitHub: https://github.com/holycisco2/SpringBoot
