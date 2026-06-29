@@ -11,6 +11,10 @@
 * **Containerization**: Docker
 
 ## 📖 核心架構 (System Architecture)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6c31694f-8de6-4a41-94eb-50f2cc87951d" width="750" alt="System Architecture">
+</p>
+
 本專案採用 **Controller-Service-Repository** 分層架構：
 1. **Controller**: 處理 HTTP 請求並轉換數據格式。
 2. **Service**: 實作核心業務邏輯。
