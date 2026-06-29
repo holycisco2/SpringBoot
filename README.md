@@ -8,7 +8,7 @@
 * **Language**: Java
 * **Database**: MySQL
 * **Build Tool**: Maven
-* **Containerization**: Docker
+
 
 ## 📖 核心架構 (System Architecture)
 <p align="center">
