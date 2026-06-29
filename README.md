@@ -2,16 +2,6 @@
 
 這是一個基於 Spring Boot 的後端開發專案，旨在展示現代化 Java 後端開發標準，包含分層架構、RESTful API 設計與容器化部署實踐。
 
-```mermaid
-graph TD
-    User((使用者/前端)) -->|HTTP Request| Controller[Spring Boot Controller]
-    subgraph Spring Boot 應用程式
-    Controller -->|呼叫業務邏輯| Service[Service Layer]
-    Service -->|處理資料交互| Repository[Repository / JPA]
-    end
-    Repository -->|SQL Query| MySQL[(MySQL Database)]
-
----
 
 ## 🚀 專案技術棧
 * **Framework**: Spring Boot
